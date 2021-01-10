@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 35rem;
+    overflow: hidden;
+    background-color: #1FA7B2;
+    position: relative;
+    .img-top, .img-bottom {
+        position: absolute;
+    }
+    .img-top {
+        width: 600px;
+        left: -120px;
+        top: -100px;
+        img {
+            width: 100%;
+        }
+    }
+    .img-bottom {
+        width: 600px;
+        right: -220px;
+        bottom: -200px;
+        img {
+            width: 100%;
+        }
+    }
+    margin: 0 auto;
+    margin-top: 100px;
+    .card {
+        border: 1px solid #1FA7B2;
+        border-radius: 20px;
+        box-shadow: 0 0 10px #000;
+                    
+        overflow: hidden;
+        max-width: 300px;
+        z-index: 9;
+        .top {
+            width: 100%;
+            height: 100px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .victor {
+            position: relative;
+            background-color: #fff;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            img {
+                position: absolute;
+                border: 2px solid #fff;
+                border-radius: 50%;
+                top: -50px;
+            }
+            .name {
+                width: 100%;
+                border-bottom: 1.5px solid #CDCED1;                padding-top: 70px;
+                h2, h3 {
+                    text-align: center;
+                    font-weight: 700;
+                    font-size: 18px;
+                    color: #A0A1A4;
+                    strong {
+                        color: #000;
+                    }
+                }
+            }
+            .datos {
+                text-align: center;
+                display: flex;
+                justify-content: space-evenly;
+                width: 100%;
+                margin: 10px auto;
+                padding-top: 5px;
+                h2 {
+                    font-weight: 700;
+                    font-size: 18px;
+                }
+                h3 {
+                    font-weight: 700;
+                    font-size: 14px;
+                    color: #A0A1A4;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+    .container .img-top {
+        left: -300px;
+        top: -200px;
+    }
+    .container .img-bottom {
+        right: -400px;
+    }
+}
+@media screen and (max-width: 720px) {
+    .container .img-top {
+        left: -400px;
+    }
+    .container .img-bottom {
+        right: -450px;
+    }
+}
