@@ -18,8 +18,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    height: 35rem;
+    width: 100%;
+    height: 45rem;
     overflow: hidden;
     background-color: #1FA7B2;
     position: relative;
@@ -43,18 +43,20 @@ body {
         }
     }
     margin: 0 auto;
-    margin-top: 100px;
+    
     .card {
         border: 1px solid #1FA7B2;
         border-radius: 20px;
         box-shadow: 0 0 10px #000;
                     
         overflow: hidden;
-        max-width: 300px;
+        max-width: 450px;
+        max-height: 450px;
+        
         z-index: 9;
         .top {
             width: 100%;
-            height: 100px;
+            height: 130px;
             img {
                 width: 100%;
                 height: 100%;
@@ -64,18 +66,23 @@ body {
             position: relative;
             background-color: #fff;
             width: 100%;
+           
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             img {
+                width: 150px;
                 position: absolute;
                 border: 2px solid #fff;
                 border-radius: 50%;
-                top: -50px;
+                top: -80px;
             }
             .name {
                 width: 100%;
+                margin-top: 15px;
+
+                padding-bottom: 10px;
                 border-bottom: 1.5px solid #CDCED1;                padding-top: 70px;
                 h2, h3 {
                     text-align: center;
@@ -91,9 +98,11 @@ body {
                 text-align: center;
                 display: flex;
                 justify-content: space-evenly;
+                align-items: center;
                 width: 100%;
+                height: 120px;
                 margin: 10px auto;
-                padding-top: 5px;
+                padding-top: 10px;
                 h2 {
                     font-weight: 700;
                     font-size: 18px;
@@ -107,20 +116,41 @@ body {
         }
     }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1200px) {
     .container .img-top {
         left: -300px;
         top: -200px;
+
     }
     .container .img-bottom {
         right: -400px;
     }
+
+    
 }
-@media screen and (max-width: 720px) {
+@media screen and (min-width: 720px) {
     .container .img-top {
         left: -400px;
     }
     .container .img-bottom {
         right: -450px;
+    }
+    .card{
+        width: 100%;
+
+    }
+}
+
+@media screen and ( min-width: 600px) {
+    .card{
+        width: 90%;
+        
+    }
+}
+
+@media screen and ( max-width: 400px) {
+    .card{
+        width: 90%;
+        
     }
 }

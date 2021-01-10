@@ -22,13 +22,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
-  height: 35rem;
+  width: 100%;
+  height: 45rem;
   overflow: hidden;
   background-color: #1FA7B2;
   position: relative;
   margin: 0 auto;
-  margin-top: 100px;
 }
 .container .img-top, .container .img-bottom {
   position: absolute;
@@ -54,12 +53,13 @@ body {
   border-radius: 20px;
   box-shadow: 0 0 10px #000;
   overflow: hidden;
-  max-width: 300px;
+  max-width: 450px;
+  max-height: 450px;
   z-index: 9;
 }
 .container .card .top {
   width: 100%;
-  height: 100px;
+  height: 130px;
 }
 .container .card .top img {
   width: 100%;
@@ -75,13 +75,16 @@ body {
   flex-direction: column;
 }
 .container .card .victor img {
+  width: 150px;
   position: absolute;
   border: 2px solid #fff;
   border-radius: 50%;
-  top: -50px;
+  top: -80px;
 }
 .container .card .victor .name {
   width: 100%;
+  margin-top: 15px;
+  padding-bottom: 10px;
   border-bottom: 1.5px solid #CDCED1;
   padding-top: 70px;
 }
@@ -98,9 +101,11 @@ body {
   text-align: center;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   width: 100%;
+  height: 120px;
   margin: 10px auto;
-  padding-top: 5px;
+  padding-top: 10px;
 }
 .container .card .victor .datos h2 {
   font-weight: 700;
@@ -112,7 +117,7 @@ body {
   color: #A0A1A4;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .container .img-top {
     left: -300px;
     top: -200px;
@@ -122,12 +127,26 @@ body {
     right: -400px;
   }
 }
-@media screen and (max-width: 720px) {
+@media screen and (min-width: 720px) {
   .container .img-top {
     left: -400px;
   }
 
   .container .img-bottom {
     right: -450px;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .card {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .card {
+    width: 90%;
   }
 }
